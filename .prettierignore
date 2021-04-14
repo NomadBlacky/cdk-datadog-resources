@@ -1,0 +1,7 @@
+.eslintrc.json
+.github/pull_request_template.md
+.projen/tasks.json
+.versionrc.json
+tsconfig.jest.json
+.projenrc.js
+package.json

@@ -11,7 +11,7 @@ const project = new AwsCdkConstructLibrary({
 
   /* AwsCdkConstructLibraryOptions */
   // cdkAssert: true,                                                                   /* Install the @aws-cdk/assert library? */
-  // cdkDependencies: undefined,                                                        /* Which AWS CDK modules (those that start with "@aws-cdk/") does this library require when consumed? */
+  cdkDependencies: ['@aws-cdk/core'],
   // cdkDependenciesAsDeps: true,                                                       /* If this is enabled (default), all modules declared in `cdkDependencies` will be also added as normal `dependencies` (as well as `peerDependencies`). */
   // cdkTestDependencies: undefined,                                                    /* AWS CDK modules required for testing. */
   // cdkVersionPinning: false,                                                          /* Use pinned version instead of caret version for CDK. */
@@ -44,7 +44,7 @@ const project = new AwsCdkConstructLibrary({
   // bundledDeps: undefined,                                                            /* List of dependencies to bundle into this module. */
   // deps: [],                                                                          /* Runtime dependencies of this module. */
   // description: undefined,                                                            /* The description is just a string that helps people understand the purpose of the package. */
-  // devDeps: [],                                                                       /* Build dependencies for this module. */
+  devDeps: ['prettier'],
   // entrypoint: 'lib/index.js',                                                        /* Module entrypoint (`main` in `package.json`). */
   // homepage: undefined,                                                               /* Package's Homepage / Website. */
   // keywords: undefined,                                                               /* Keywords to include in `package.json`. */

@@ -1,8 +1,8 @@
 {
-  "name": "cdk-datadog-resources",
+  "name": "@nomadblacky/cdk-datadog-resources",
   "repository": {
     "type": "git",
-    "url": "https://github.com/tkadowaki.dev.blackey/cdk-datadog-resources.git"
+    "url": "https://github.com/NomadBlacky/cdk-datadog-resources.git"
   },
   "scripts": {
     "clobber": "npx projen clobber",
@@ -24,8 +24,8 @@
     "start": "npx projen start"
   },
   "author": {
-    "name": "Takumi Kadowaki",
-    "email": "tkadowaki.dev.blackey@gmail.com",
+    "name": "NomadBlacky",
+    "email": "nomadblacky@gmail.com",
     "organization": false
   },
   "devDependencies": {
@@ -45,13 +45,18 @@
     "jsii-docgen": "^1.8.67",
     "jsii-pacmak": "^1.28.0",
     "json-schema": "^0.3.0",
+    "prettier": "^2.2.1",
     "projen": "^0.17.42",
     "standard-version": "^9",
     "ts-jest": "^26.5.4",
     "typescript": "^4.2.4"
   },
   "peerDependencies": {
+    "@aws-cdk/core": "^1.95.2",
     "constructs": "^3.2.27"
+  },
+  "dependencies": {
+    "@aws-cdk/core": "^1.95.2"
   },
   "bundledDependencies": [],
   "keywords": [
