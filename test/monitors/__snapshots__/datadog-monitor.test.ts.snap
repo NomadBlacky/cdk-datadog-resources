@@ -1,0 +1,198 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot test 1`] = `
+Stack {
+  "_logicalIds": LogicalIDs {
+    "renames": Object {},
+    "reverse": Object {},
+  },
+  "_missingContext": Array [],
+  "_stackDependencies": Object {},
+  "_stackName": "Default",
+  "_versionReportingEnabled": undefined,
+  "account": "\${Token[AWS.AccountId.0]}",
+  "artifactId": "Default",
+  "environment": "aws://unknown-account/unknown-region",
+  "node": ConstructNode {
+    "_actualNode": Node {
+      "_aspects": Array [],
+      "_children": Object {
+        "TestMonitor": DatadogMonitor {
+          "_allowCrossEnvironment": false,
+          "_physicalName": undefined,
+          "env": Object {
+            "account": "\${Token[AWS.AccountId.0]}",
+            "region": "\${Token[AWS.Region.4]}",
+          },
+          "node": ConstructNode {
+            "_actualNode": Node {
+              "_aspects": Array [],
+              "_children": Object {
+                "DatadogMonitor": CfnResource {
+                  "_cfnProperties": Object {
+                    "DatadogCredentials": Object {
+                      "apiKey": "DATADOG_API_KEY",
+                      "applicationKey": "DATADOG_APPLICATION_KEY",
+                    },
+                    "Query": "avg(last_1h):sum:system.cpu.system{host:host0} > 100",
+                    "Type": "query alert",
+                  },
+                  "cfnOptions": Object {},
+                  "cfnResourceType": "Datadog::Monitors::Monitor",
+                  "dependsOn": Set {},
+                  "logicalId": "\${Token[Default.TestMonitor.DatadogMonitor.LogicalID.10]}",
+                  "node": ConstructNode {
+                    "_actualNode": Node {
+                      "_aspects": Array [],
+                      "_children": Object {},
+                      "_context": Object {},
+                      "_dependencies": Set {},
+                      "_locked": false,
+                      "_metadata": Array [
+                        Object {
+                          "data": "\${Token[Default.TestMonitor.DatadogMonitor.LogicalID.10]}",
+                          "trace": Array [
+                            "new DatadogMonitor (/home/nomadblacky/ghq/github.com/NomadBlacky/cdk-datadog-resources/src/monitors/datadog-monitor.ts:13:5)",
+                            "Object.<anonymous> (/home/nomadblacky/ghq/github.com/NomadBlacky/cdk-datadog-resources/test/monitors/datadog-monitor.test.ts:7:3)",
+                            "Object.asyncJestTest (/home/nomadblacky/ghq/github.com/NomadBlacky/cdk-datadog-resources/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:106:37)",
+                            "/home/nomadblacky/ghq/github.com/NomadBlacky/cdk-datadog-resources/node_modules/jest-jasmine2/build/queueRunner.js:45:12",
+                            "new Promise (<anonymous>)",
+                            "mapper (/home/nomadblacky/ghq/github.com/NomadBlacky/cdk-datadog-resources/node_modules/jest-jasmine2/build/queueRunner.js:28:19)",
+                            "/home/nomadblacky/ghq/github.com/NomadBlacky/cdk-datadog-resources/node_modules/jest-jasmine2/build/queueRunner.js:75:41",
+                            "processTicksAndRejections (internal/process/task_queues.js:93:5)",
+                          ],
+                          "type": "aws:cdk:logicalId",
+                        },
+                      ],
+                      "_validations": Array [],
+                      "host": [Circular],
+                      "id": "DatadogMonitor",
+                      "invokedAspects": Array [],
+                      "scope": [Circular],
+                    },
+                    "host": [Circular],
+                  },
+                  "rawOverrides": Object {},
+                  "stack": [Circular],
+                  Symbol(@aws-cdk/core.DependableTrait): Object {
+                    "dependencyRoots": Array [
+                      [Circular],
+                    ],
+                  },
+                },
+              },
+              "_context": Object {},
+              "_dependencies": Set {},
+              "_locked": false,
+              "_metadata": Array [],
+              "_validations": Array [],
+              "host": [Circular],
+              "id": "TestMonitor",
+              "invokedAspects": Array [],
+              "scope": [Circular],
+            },
+            "host": [Circular],
+          },
+          "physicalName": "\${Token[TOKEN.9]}",
+          "stack": [Circular],
+          Symbol(@aws-cdk/core.DependableTrait): Object {
+            "dependencyRoots": Array [
+              [Circular],
+            ],
+          },
+        },
+      },
+      "_context": Object {},
+      "_dependencies": Set {},
+      "_locked": false,
+      "_metadata": Array [],
+      "_validations": Array [],
+      "host": [Circular],
+      "id": "Default",
+      "invokedAspects": Array [],
+      "scope": App {
+        "_assemblyBuilder": CloudAssemblyBuilder {
+          "artifacts": Object {},
+          "assetOutdir": "/tmp/cdk-test-app-rfo5Dy",
+          "missing": Array [],
+          "outdir": "/tmp/cdk-test-app-rfo5Dy",
+          "parentBuilder": undefined,
+        },
+        "account": undefined,
+        "node": ConstructNode {
+          "_actualNode": Node {
+            "_aspects": Array [],
+            "_children": Object {
+              "Default": [Circular],
+              "Tree": TreeMetadata {
+                "node": ConstructNode {
+                  "_actualNode": Node {
+                    "_aspects": Array [],
+                    "_children": Object {},
+                    "_context": Object {},
+                    "_dependencies": Set {},
+                    "_locked": false,
+                    "_metadata": Array [],
+                    "_validations": Array [],
+                    "host": [Circular],
+                    "id": "Tree",
+                    "invokedAspects": Array [],
+                    "scope": [Circular],
+                  },
+                  "host": [Circular],
+                },
+                Symbol(@aws-cdk/core.DependableTrait): Object {
+                  "dependencyRoots": Array [
+                    [Circular],
+                  ],
+                },
+              },
+            },
+            "_context": Object {},
+            "_dependencies": Set {},
+            "_locked": false,
+            "_metadata": Array [],
+            "_validations": Array [],
+            "host": [Circular],
+            "id": "",
+            "invokedAspects": Array [],
+            "scope": undefined,
+          },
+          "host": [Circular],
+        },
+        "parentStage": undefined,
+        "region": undefined,
+        "stageName": "",
+        Symbol(@aws-cdk/core.DependableTrait): Object {
+          "dependencyRoots": Array [
+            [Circular],
+          ],
+        },
+      },
+    },
+    "host": [Circular],
+  },
+  "region": "\${Token[AWS.Region.4]}",
+  "synthesizer": LegacyStackSynthesizer {
+    "addedImageAssets": Set {},
+    "cycle": false,
+    "stack": [Circular],
+  },
+  "tags": TagManager {
+    "initialTagPriority": 50,
+    "priorities": Map {},
+    "resourceTypeName": "aws:cdk:stack",
+    "tagFormatter": KeyValueFormatter {},
+    "tagPropertyName": "tags",
+    "tags": Map {},
+  },
+  "templateFile": "Default.template.json",
+  "templateOptions": Object {},
+  "terminationProtection": undefined,
+  Symbol(@aws-cdk/core.DependableTrait): Object {
+    "dependencyRoots": Array [
+      [Circular],
+    ],
+  },
+}
+`;
