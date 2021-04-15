@@ -5,12 +5,22 @@ test('Snapshot test', () => {
   const stack = new Stack();
 
   new DatadogMonitor(stack, 'TestMonitor', {
-    datadogCredentials: {
-      apiKey: 'DATADOG_API_KEY',
-      applicationKey: 'DATADOG_APPLICATION_KEY',
+    DatadogCredentials: {
+      ApiKey: process.env.DATADOG_API_KEY || 'DATADOG_API_KEY',
+      ApplicationKey: process.env.DATADOG_APP_KEY || 'DATADOG_APP_KEY',
     },
-    query: 'avg(last_1h):sum:system.cpu.system{host:host0} > 100',
-    type: 'query alert',
+    Query: 'avg(last_1h):sum:system.cpu.system{host:host0} > 100',
+    Type: 'query alert',
+    Name: 'Test Monitor',
+    Options: {
+      Thresholds: {
+        Critical: 100,
+        Warning: 80,
+        OK: 90,
+      },
+      NotifyNoData: true,
+      EvaluationDelay: 60,
+    },
   });
 
   expect(stack).toMatchSnapshot();

@@ -10,7 +10,7 @@ Stack {
   "_stackDependencies": Object {},
   "_stackName": "Default",
   "_versionReportingEnabled": undefined,
-  "account": "\${Token[AWS.AccountId.0]}",
+  "account": "\${Token[AWS.AccountId.4]}",
   "artifactId": "Default",
   "environment": "aws://unknown-account/unknown-region",
   "node": ConstructNode {
@@ -21,8 +21,8 @@ Stack {
           "_allowCrossEnvironment": false,
           "_physicalName": undefined,
           "env": Object {
-            "account": "\${Token[AWS.AccountId.0]}",
-            "region": "\${Token[AWS.Region.4]}",
+            "account": "\${Token[AWS.AccountId.4]}",
+            "region": "\${Token[AWS.Region.8]}",
           },
           "node": ConstructNode {
             "_actualNode": Node {
@@ -31,8 +31,18 @@ Stack {
                 "DatadogMonitor": CfnResource {
                   "_cfnProperties": Object {
                     "DatadogCredentials": Object {
-                      "apiKey": "DATADOG_API_KEY",
-                      "applicationKey": "DATADOG_APPLICATION_KEY",
+                      "ApiKey": "5bd60554a531bd3cd0983550f18a7d60",
+                      "ApplicationKey": "536b6ca87ea0a83e6303ea7ffded1b0da8ad692c",
+                    },
+                    "Name": "Test Monitor",
+                    "Options": Object {
+                      "EvaluationDelay": 60,
+                      "NotifyNoData": true,
+                      "Thresholds": Object {
+                        "Critical": 100,
+                        "OK": 90,
+                        "Warning": 80,
+                      },
                     },
                     "Query": "avg(last_1h):sum:system.cpu.system{host:host0} > 100",
                     "Type": "query alert",
@@ -40,7 +50,7 @@ Stack {
                   "cfnOptions": Object {},
                   "cfnResourceType": "Datadog::Monitors::Monitor",
                   "dependsOn": Set {},
-                  "logicalId": "\${Token[Default.TestMonitor.DatadogMonitor.LogicalID.10]}",
+                  "logicalId": "\${Token[Default.TestMonitor.DatadogMonitor.LogicalID.14]}",
                   "node": ConstructNode {
                     "_actualNode": Node {
                       "_aspects": Array [],
@@ -50,9 +60,9 @@ Stack {
                       "_locked": false,
                       "_metadata": Array [
                         Object {
-                          "data": "\${Token[Default.TestMonitor.DatadogMonitor.LogicalID.10]}",
+                          "data": "\${Token[Default.TestMonitor.DatadogMonitor.LogicalID.14]}",
                           "trace": Array [
-                            "new DatadogMonitor (/home/nomadblacky/ghq/github.com/NomadBlacky/cdk-datadog-resources/src/monitors/datadog-monitor.ts:13:5)",
+                            "new DatadogMonitor (/home/nomadblacky/ghq/github.com/NomadBlacky/cdk-datadog-resources/src/monitors/datadog-monitor.ts:36:5)",
                             "Object.<anonymous> (/home/nomadblacky/ghq/github.com/NomadBlacky/cdk-datadog-resources/test/monitors/datadog-monitor.test.ts:7:3)",
                             "Object.asyncJestTest (/home/nomadblacky/ghq/github.com/NomadBlacky/cdk-datadog-resources/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:106:37)",
                             "/home/nomadblacky/ghq/github.com/NomadBlacky/cdk-datadog-resources/node_modules/jest-jasmine2/build/queueRunner.js:45:12",
@@ -93,7 +103,7 @@ Stack {
             },
             "host": [Circular],
           },
-          "physicalName": "\${Token[TOKEN.9]}",
+          "physicalName": "\${Token[TOKEN.13]}",
           "stack": [Circular],
           Symbol(@aws-cdk/core.DependableTrait): Object {
             "dependencyRoots": Array [
@@ -113,9 +123,9 @@ Stack {
       "scope": App {
         "_assemblyBuilder": CloudAssemblyBuilder {
           "artifacts": Object {},
-          "assetOutdir": "/tmp/cdk-test-app-rfo5Dy",
+          "assetOutdir": "/tmp/cdk-test-app-jNLBIS",
           "missing": Array [],
-          "outdir": "/tmp/cdk-test-app-rfo5Dy",
+          "outdir": "/tmp/cdk-test-app-jNLBIS",
           "parentBuilder": undefined,
         },
         "account": undefined,
@@ -172,7 +182,7 @@ Stack {
     },
     "host": [Circular],
   },
-  "region": "\${Token[AWS.Region.4]}",
+  "region": "\${Token[AWS.Region.8]}",
   "synthesizer": LegacyStackSynthesizer {
     "addedImageAssets": Set {},
     "cycle": false,
