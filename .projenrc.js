@@ -41,10 +41,10 @@ const project = new AwsCdkConstructLibrary({
   // authorUrl: undefined,                                                              /* Author's URL / Website. */
   // autoDetectBin: true,                                                               /* Automatically add all executables under the `bin` directory to your `package.json` file under the `bin` section. */
   // bin: undefined,                                                                    /* Binary programs vended with your module. */
-  // bundledDeps: undefined,                                                            /* List of dependencies to bundle into this module. */
+  bundledDeps: ['camelcase-keys'],
   // deps: [],                                                                          /* Runtime dependencies of this module. */
   // description: undefined,                                                            /* The description is just a string that helps people understand the purpose of the package. */
-  devDeps: ['prettier'],
+  devDeps: ['prettier', 'aws-cdk'],
   // entrypoint: 'lib/index.js',                                                        /* Module entrypoint (`main` in `package.json`). */
   // homepage: undefined,                                                               /* Package's Homepage / Website. */
   // keywords: undefined,                                                               /* Keywords to include in `package.json`. */
@@ -76,7 +76,7 @@ const project = new AwsCdkConstructLibrary({
   // copyrightPeriod: undefined,                                                        /* The copyright years to put in the LICENSE file. */
   // dependabot: true,                                                                  /* Include dependabot configuration. */
   // dependabotOptions: undefined,                                                      /* Options for dependabot. */
-  // gitignore: undefined,                                                              /* Additional entries to .gitignore. */
+  gitignore: ['cdk.out/'],
   // jest: true,                                                                        /* Setup jest unit tests. */
   // jestOptions: undefined,                                                            /* Jest options. */
   // jsiiReleaseVersion: 'latest',                                                      /* Version requirement of `jsii-release` which is used to publish modules to npm. */
