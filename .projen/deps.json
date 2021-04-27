@@ -23,6 +23,10 @@
       "type": "build"
     },
     {
+      "name": "aws-cdk",
+      "type": "build"
+    },
+    {
       "name": "eslint",
       "type": "build"
     },
@@ -88,6 +92,10 @@
     {
       "name": "typescript",
       "type": "build"
+    },
+    {
+      "name": "camelcase-keys",
+      "type": "bundled"
     },
     {
       "name": "@aws-cdk/core",

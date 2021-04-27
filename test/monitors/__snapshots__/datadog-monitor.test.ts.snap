@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot test 1`] = `
+Object {
+  "Resources": Object {
+    "TestMonitor": Object {
+      "Properties": Object {
+        "DatadogCredentials": Object {
+          "ApiKey": "DATADOG_API_KEY",
+          "ApplicationKey": "DATADOG_APP_KEY",
+        },
+        "Name": "Test Monitor",
+        "Options": Object {
+          "EvaluationDelay": 60,
+          "NotifyNoData": true,
+          "Thresholds": Object {
+            "Critical": 100,
+            "OK": 90,
+            "Warning": 80,
+          },
+        },
+        "Query": "avg(last_1h):sum:system.cpu.system{host:host0} > 100",
+        "Type": "query alert",
+      },
+      "Type": "Datadog::Monitors::Monitor",
+    },
+  },
+}
+`;
