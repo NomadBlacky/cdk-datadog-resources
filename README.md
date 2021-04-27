@@ -1,5 +1,7 @@
 # AWS CDK Datadog Resources
 
+[![npm version](https://badge.fury.io/js/%40nomadblacky%2Fcdk-datadog-resources.svg)](https://badge.fury.io/js/%40nomadblacky%2Fcdk-datadog-resources)
+
 An AWS CDK construct library that wrapped [DataDog/datadog-cloudformation-resources](https://github.com/DataDog/datadog-cloudformation-resources).
 
 ## Requirements
@@ -27,7 +29,7 @@ You need to register the correct version listed in `Supported Resources`.
 TypeScript
 
 ```shell
-npm install --save-dev @nomadblacky/cdk-datadog-resources
+npm install @nomadblacky/cdk-datadog-resources
 ```
 
 ## Usage
