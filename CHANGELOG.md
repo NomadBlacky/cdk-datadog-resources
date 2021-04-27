@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.2](https://github.com/NomadBlacky/cdk-datadog-resources/compare/v0.0.1...v0.0.2) (2021-04-27)
+
+
+### Features
+
+* Add NPM publish setting ([9097f4b](https://github.com/NomadBlacky/cdk-datadog-resources/commit/9097f4b76d02a4b3525bd115b4e626ed432fadc6))
+
 ### 0.0.1 (2021-04-27)
 
 
