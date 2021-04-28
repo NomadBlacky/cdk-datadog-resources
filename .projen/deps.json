@@ -2,7 +2,7 @@
   "dependencies": [
     {
       "name": "@aws-cdk/assert",
-      "version": "^1.95.2",
+      "version": "^1.101.0",
       "type": "build"
     },
     {
@@ -99,7 +99,7 @@
     },
     {
       "name": "@aws-cdk/core",
-      "version": "^1.95.2",
+      "version": "^1.101.0",
       "type": "peer"
     },
     {
@@ -109,7 +109,7 @@
     },
     {
       "name": "@aws-cdk/core",
-      "version": "^1.95.2",
+      "version": "^1.101.0",
       "type": "runtime"
     }
   ],
