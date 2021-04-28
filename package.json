@@ -29,7 +29,7 @@
     "organization": false
   },
   "devDependencies": {
-    "@aws-cdk/assert": "^1.95.2",
+    "@aws-cdk/assert": "^1.101.0",
     "@types/jest": "^26.0.22",
     "@types/node": "^10.17.0",
     "@typescript-eslint/eslint-plugin": "^4.22.0",
@@ -53,11 +53,11 @@
     "typescript": "^4.2.4"
   },
   "peerDependencies": {
-    "@aws-cdk/core": "^1.95.2",
+    "@aws-cdk/core": "^1.101.0",
     "constructs": "^3.2.27"
   },
   "dependencies": {
-    "@aws-cdk/core": "^1.95.2",
+    "@aws-cdk/core": "^1.101.0",
     "camelcase-keys": "^6.2.2"
   },
   "bundledDependencies": [

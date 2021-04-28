@@ -3,7 +3,7 @@ const { AwsCdkConstructLibrary, NpmAccess } = require('projen');
 const project = new AwsCdkConstructLibrary({
   author: 'NomadBlacky',
   authorAddress: 'nomadblacky@gmail.com',
-  cdkVersion: '1.95.2',
+  cdkVersion: '1.101.0',
   defaultReleaseBranch: 'master',
   jsiiFqn: 'projen.AwsCdkConstructLibrary',
   name: '@nomadblacky/cdk-datadog-resources',
