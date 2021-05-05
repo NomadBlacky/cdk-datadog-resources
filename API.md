@@ -18,6 +18,13 @@ Name|Description
 [MonitorThresholds](#nomadblacky-cdk-datadog-resources-monitorthresholds)|*No description*
 
 
+**Enums**
+
+Name|Description
+----|-----------
+[MonitorType](#nomadblacky-cdk-datadog-resources-monitortype)|The type of the monitor.
+
+
 
 ## class DatadogMonitor  <a id="nomadblacky-cdk-datadog-resources-datadogmonitor"></a>
 
@@ -38,7 +45,7 @@ new DatadogMonitor(scope: Construct, id: string, props: DatadogMonitorProps)
 * **props** (<code>[DatadogMonitorProps](#nomadblacky-cdk-datadog-resources-datadogmonitorprops)</code>)  *No description*
   * **datadogCredentials** (<code>[DatadogCredentials](#nomadblacky-cdk-datadog-resources-datadogcredentials)</code>)  Credentials for the Datadog API. 
   * **query** (<code>string</code>)  The monitor query. 
-  * **type** (<code>string</code>)  The type of the monitor. 
+  * **type** (<code>[MonitorType](#nomadblacky-cdk-datadog-resources-monitortype)</code>)  The type of the monitor. 
   * **message** (<code>string</code>)  A message to include with notifications for the monitor. __*Optional*__
   * **multi** (<code>boolean</code>)  Whether or not the monitor is multi alert. __*Optional*__
   * **name** (<code>string</code>)  Name of the monitor. __*Optional*__
@@ -74,7 +81,7 @@ Name | Type | Description
 -----|------|-------------
 **datadogCredentials** | <code>[DatadogCredentials](#nomadblacky-cdk-datadog-resources-datadogcredentials)</code> | Credentials for the Datadog API.
 **query** | <code>string</code> | The monitor query.
-**type** | <code>string</code> | The type of the monitor.
+**type** | <code>[MonitorType](#nomadblacky-cdk-datadog-resources-monitortype)</code> | The type of the monitor.
 **message**? | <code>string</code> | A message to include with notifications for the monitor.<br/>__*Optional*__
 **multi**? | <code>boolean</code> | Whether or not the monitor is multi alert.<br/>__*Optional*__
 **name**? | <code>string</code> | Name of the monitor.<br/>__*Optional*__
@@ -140,5 +147,22 @@ Name | Type | Description
 **warning**? | <code>number</code> | Threshold value for triggering a warning.<br/>__*Optional*__
 **warningRecovery**? | <code>number</code> | Threshold value for recovering from a warning state.<br/>__*Optional*__
 
+
+
+## enum MonitorType  <a id="nomadblacky-cdk-datadog-resources-monitortype"></a>
+
+The type of the monitor.
+
+Name | Description
+-----|-----
+**COMPOSITE** |
+**EVENT_ALERT** |
+**LOG_ALERT** |
+**METRIC_ALERT** |
+**PROCESS_ALERT** |
+**QUERY_ALERT** |
+**SERVICE_CHECK** |
+**SYNTHETICS_ALERT** |
+**TRACE_ANALYTICS_ALERT** |
 
 
