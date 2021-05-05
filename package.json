@@ -115,7 +115,12 @@
   "stability": "stable",
   "jsii": {
     "outdir": "dist",
-    "targets": {},
+    "targets": {
+      "python": {
+        "distName": "cdk-datadog-resources",
+        "module": "cdk_datadog_resources"
+      }
+    },
     "tsc": {
       "outDir": "lib",
       "rootDir": "src"
