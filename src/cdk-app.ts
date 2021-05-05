@@ -1,5 +1,6 @@
 import { App, Stack } from '@aws-cdk/core';
 import { DatadogMonitor } from './monitors/datadog-monitor';
+import { MonitorType } from './monitors/properties';
 
 const app = new App();
 const stack = new Stack(app, 'CdkDatadogResourcesTestStack');
@@ -10,7 +11,7 @@ new DatadogMonitor(stack, 'TestMonitor', {
     applicationKey: process.env.DATADOG_APP_KEY || 'DATADOG_APP_KEY',
   },
   query: 'avg(last_1h):sum:system.cpu.system{host:host0} > 100',
-  type: 'query alert',
+  type: MonitorType.QUERY_ALERT,
   name: 'Test Monitor',
   options: {
     thresholds: {
