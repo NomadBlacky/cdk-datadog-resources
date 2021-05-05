@@ -1,12 +1,15 @@
 const { AwsCdkConstructLibrary, NpmAccess } = require('projen');
 
+const ORGANIZATION = 'nomadblacky';
+const PROJECT_NAME = 'cdk-datadog-resources';
+
 const project = new AwsCdkConstructLibrary({
   author: 'NomadBlacky',
   authorAddress: 'nomadblacky@gmail.com',
   cdkVersion: '1.101.0',
   defaultReleaseBranch: 'master',
   jsiiFqn: 'projen.AwsCdkConstructLibrary',
-  name: '@nomadblacky/cdk-datadog-resources',
+  name: `@${ORGANIZATION}/${PROJECT_NAME}`,
   repositoryUrl: 'https://github.com/NomadBlacky/cdk-datadog-resources.git',
 
   /* AwsCdkConstructLibraryOptions */
@@ -29,7 +32,10 @@ const project = new AwsCdkConstructLibrary({
   // publishToGo: undefined,                                                            /* Publish Go bindings to a git repository. */
   // publishToMaven: undefined,                                                         /* Publish to maven. */
   // publishToNuget: undefined,                                                         /* Publish to NuGet. */
-  // publishToPypi: undefined,                                                          /* Publish to pypi. */
+  publishToPypi: {
+    distName: PROJECT_NAME,
+    module: 'cdk_datadog_resources',
+  },
   // rootdir: '.',                                                                      /* undefined */
   // sampleCode: true,                                                                  /* Generate one-time sample in `src/` and `test/` if there are no files there. */
 
