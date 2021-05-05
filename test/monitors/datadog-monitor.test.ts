@@ -1,6 +1,6 @@
 import { SynthUtils } from '@aws-cdk/assert';
 import { Stack } from '@aws-cdk/core';
-import { DatadogMonitor } from '../../src';
+import { DatadogMonitor, MonitorType } from '../../src';
 
 test('Snapshot test', () => {
   const stack = new Stack();
@@ -11,7 +11,7 @@ test('Snapshot test', () => {
       applicationKey: 'DATADOG_APP_KEY',
     },
     query: 'avg(last_1h):sum:system.cpu.system{host:host0} > 100',
-    type: 'query alert',
+    type: MonitorType.QUERY_ALERT,
     name: 'Test Monitor',
     options: {
       thresholds: {
