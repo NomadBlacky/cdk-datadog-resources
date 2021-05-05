@@ -51,7 +51,7 @@ new DatadogMonitor(stack, 'TestMonitor', {
     applicationKey: process.env.DATADOG_APP_KEY || 'DATADOG_APP_KEY',
   },
   query: 'avg(last_1h):sum:system.cpu.system{host:host0} > 100',
-  type: 'query alert',
+  type: MonitorType.QueryAlert,
   name: 'Test Monitor',
   options: {
     thresholds: {

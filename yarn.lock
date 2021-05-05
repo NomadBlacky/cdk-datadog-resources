@@ -815,12 +815,12 @@
     "@types/yargs-parser" "*"
 
 "@typescript-eslint/eslint-plugin@^4.22.0":
-  version "4.22.0"
-  resolved "https://registry.yarnpkg.com/@typescript-eslint/eslint-plugin/-/eslint-plugin-4.22.0.tgz#3d5f29bb59e61a9dba1513d491b059e536e16dbc"
-  integrity sha512-U8SP9VOs275iDXaL08Ln1Fa/wLXfj5aTr/1c0t0j6CdbOnxh+TruXu1p4I0NAvdPBQgoPjHsgKn28mOi0FzfoA==
+  version "4.22.1"
+  resolved "https://registry.yarnpkg.com/@typescript-eslint/eslint-plugin/-/eslint-plugin-4.22.1.tgz#6bcdbaa4548553ab861b4e5f34936ead1349a543"
+  integrity sha512-kVTAghWDDhsvQ602tHBc6WmQkdaYbkcTwZu+7l24jtJiYvm9l+/y/b2BZANEezxPDiX5MK2ZecE+9BFi/YJryw==
   dependencies:
-    "@typescript-eslint/experimental-utils" "4.22.0"
-    "@typescript-eslint/scope-manager" "4.22.0"
+    "@typescript-eslint/experimental-utils" "4.22.1"
+    "@typescript-eslint/scope-manager" "4.22.1"
     debug "^4.1.1"
     functional-red-black-tree "^1.0.1"
     lodash "^4.17.15"
@@ -828,15 +828,15 @@
     semver "^7.3.2"
     tsutils "^3.17.1"
 
-"@typescript-eslint/experimental-utils@4.22.0":
-  version "4.22.0"
-  resolved "https://registry.yarnpkg.com/@typescript-eslint/experimental-utils/-/experimental-utils-4.22.0.tgz#68765167cca531178e7b650a53456e6e0bef3b1f"
-  integrity sha512-xJXHHl6TuAxB5AWiVrGhvbGL8/hbiCQ8FiWwObO3r0fnvBdrbWEDy1hlvGQOAWc6qsCWuWMKdVWlLAEMpxnddg==
+"@typescript-eslint/experimental-utils@4.22.1":
+  version "4.22.1"
+  resolved "https://registry.yarnpkg.com/@typescript-eslint/experimental-utils/-/experimental-utils-4.22.1.tgz#3938a5c89b27dc9a39b5de63a62ab1623ab27497"
+  integrity sha512-svYlHecSMCQGDO2qN1v477ax/IDQwWhc7PRBiwAdAMJE7GXk5stF4Z9R/8wbRkuX/5e9dHqbIWxjeOjckK3wLQ==
   dependencies:
     "@types/json-schema" "^7.0.3"
-    "@typescript-eslint/scope-manager" "4.22.0"
-    "@typescript-eslint/types" "4.22.0"
-    "@typescript-eslint/typescript-estree" "4.22.0"
+    "@typescript-eslint/scope-manager" "4.22.1"
+    "@typescript-eslint/types" "4.22.1"
+    "@typescript-eslint/typescript-estree" "4.22.1"
     eslint-scope "^5.0.0"
     eslint-utils "^2.0.0"
 
@@ -4175,9 +4175,9 @@ jsii-diff@^1.28.0:
     yargs "^16.2.0"
 
 jsii-docgen@^1.8.67:
-  version "1.8.70"
-  resolved "https://registry.yarnpkg.com/jsii-docgen/-/jsii-docgen-1.8.70.tgz#1ad3dc13152a3cfecf3982bf5897eab5bdf204e4"
-  integrity sha512-bs3EqUDhruXeYSOOTE28jnXxRXkQQAQJAbbmj8T94bQvIpHeo1kr1lMXZVfLJ3RJ+5MwbJZokTo2WsavFN1AVA==
+  version "1.8.71"
+  resolved "https://registry.yarnpkg.com/jsii-docgen/-/jsii-docgen-1.8.71.tgz#8a6a1c4d0edd4508c97580e55be20468a2a8eaf6"
+  integrity sha512-3uyf4X7O0hPKk3KqSIwt2N/duDewlJb4kRIQVvbJmYJubjECgmLcDtku7PVSjFxEjP1IoVUnvbpI5pcvmdqVAw==
   dependencies:
     "@jsii/spec" "^1.16.0"
     fs-extra "^9.0.1"
@@ -6072,9 +6072,9 @@ stack-utils@^2.0.2:
     escape-string-regexp "^2.0.0"
 
 standard-version@^9:
-  version "9.2.0"
-  resolved "https://registry.yarnpkg.com/standard-version/-/standard-version-9.2.0.tgz#d4e64b201ec1abb8a677b265d8755e5e8b9e33a3"
-  integrity sha512-utJcqjk/wR4sePSwDoRcc5CzJ6S+kec5Hd0+1TJI+j1TRYuuptweAnEUdkkjGf2vYoGab2ezefyVtW065HZ1Uw==
+  version "9.3.0"
+  resolved "https://registry.yarnpkg.com/standard-version/-/standard-version-9.3.0.tgz#2e6ff439aa49b2ea8952262f30ae6b70c02467d3"
+  integrity sha512-cYxxKXhYfI3S9+CA84HmrJa9B88H56V5FQ302iFF2TNwJukJCNoU8FgWt+11YtwKFXRkQQFpepC2QOF7aDq2Ow==
   dependencies:
     chalk "^2.4.2"
     conventional-changelog "3.1.24"
