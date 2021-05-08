@@ -116,6 +116,13 @@
   "jsii": {
     "outdir": "dist",
     "targets": {
+      "java": {
+        "package": "dev.nomadblacky.cdk_datadog_resources",
+        "maven": {
+          "groupId": "dev.nomadblacky",
+          "artifactId": "cdk-datadog-resources"
+        }
+      },
       "python": {
         "distName": "cdk-datadog-resources",
         "module": "cdk_datadog_resources"

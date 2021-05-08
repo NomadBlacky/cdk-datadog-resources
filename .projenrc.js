@@ -30,7 +30,11 @@ const project = new AwsCdkConstructLibrary({
   // eslintOptions: undefined,                                                          /* Eslint options. */
   // excludeTypescript: undefined,                                                      /* Accepts a list of glob patterns. */
   // publishToGo: undefined,                                                            /* Publish Go bindings to a git repository. */
-  // publishToMaven: undefined,                                                         /* Publish to maven. */
+  publishToMaven: {
+    javaPackage: 'dev.nomadblacky.cdk_datadog_resources',
+    mavenGroupId: 'dev.nomadblacky',
+    mavenArtifactId: 'cdk-datadog-resources',
+  },
   // publishToNuget: undefined,                                                         /* Publish to NuGet. */
   publishToPypi: {
     distName: PROJECT_NAME,
