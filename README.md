@@ -14,6 +14,7 @@ You need to register the correct version listed in `Supported Resources`.
 
 - TypeScript
 - Python
+- Java
 
 ## Supported Resources
 
@@ -37,6 +38,16 @@ Python
 
 ```shell
 pip install cdk-datadog-resources
+```
+
+Java
+
+```xml
+<dependency>
+    <groupId>dev.nomadblacky</groupId>
+    <artifactId>cdk-datadog-resources</artifactId>
+    <version>x.y.z</version>
+</dependency>
 ```
 
 ## Usage
