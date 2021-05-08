@@ -13,6 +13,7 @@ You need to register the correct version listed in `Supported Resources`.
 ## Supported CDK Languages
 
 - TypeScript
+- Python
 
 ## Supported Resources
 
@@ -30,6 +31,12 @@ TypeScript
 
 ```shell
 npm install @nomadblacky/cdk-datadog-resources
+```
+
+Python
+
+```shell
+pip install cdk-datadog-resources
 ```
 
 ## Usage
