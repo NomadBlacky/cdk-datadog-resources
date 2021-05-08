@@ -14,7 +14,7 @@ You need to register the correct version listed in `Supported Resources`.
 
 - TypeScript
 - Python
-- Java
+- ~~Java~~ Sorry, there is a problem with the release. ([#22](https://github.com/NomadBlacky/cdk-datadog-resources/issues/22))
 
 ## Supported Resources
 
