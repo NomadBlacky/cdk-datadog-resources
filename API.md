@@ -4,6 +4,7 @@
 
 Name|Description
 ----|-----------
+[DatadogDashboard](#nomadblacky-cdk-datadog-resources-datadogdashboard)|Datadog Dashboard 1.0.0.
 [DatadogMonitor](#nomadblacky-cdk-datadog-resources-datadogmonitor)|Datadog Monitor 3.0.0.
 
 
@@ -12,6 +13,7 @@ Name|Description
 Name|Description
 ----|-----------
 [DatadogCredentials](#nomadblacky-cdk-datadog-resources-datadogcredentials)|Credentials for the Datadog API.
+[DatadogDashboardProps](#nomadblacky-cdk-datadog-resources-datadogdashboardprops)|*No description*
 [DatadogMonitorProps](#nomadblacky-cdk-datadog-resources-datadogmonitorprops)|*No description*
 [MonitorOptions](#nomadblacky-cdk-datadog-resources-monitoroptions)|*No description*
 [MonitorThresholdWindows](#nomadblacky-cdk-datadog-resources-monitorthresholdwindows)|*No description*
@@ -23,6 +25,29 @@ Name|Description
 Name|Description
 ----|-----------
 [MonitorType](#nomadblacky-cdk-datadog-resources-monitortype)|The type of the monitor.
+
+
+
+## class DatadogDashboard  <a id="nomadblacky-cdk-datadog-resources-datadogdashboard"></a>
+
+Datadog Dashboard 1.0.0.
+
+
+### Initializer
+
+
+
+
+```ts
+new DatadogDashboard(scope: Construct, id: string, props: DatadogDashboardProps)
+```
+
+* **scope** (<code>[Construct](#aws-cdk-core-construct)</code>)  *No description*
+* **id** (<code>string</code>)  *No description*
+* **props** (<code>[DatadogDashboardProps](#nomadblacky-cdk-datadog-resources-datadogdashboardprops)</code>)  *No description*
+  * **dashboardDefinition** (<code>string</code>)  JSON string of the dashboard definition. 
+  * **datadogCredentials** (<code>[DatadogCredentials](#nomadblacky-cdk-datadog-resources-datadogcredentials)</code>)  Credentials for the Datadog API. 
+
 
 
 
@@ -67,6 +92,20 @@ Name | Type | Description
 **apiKey** | <code>string</code> | Datadog API key.
 **applicationKey** | <code>string</code> | Datadog application key.
 **apiURL**? | <code>string</code> | Datadog API URL (defaults to https://api.datadoghq.com) Use https://api.datadoghq.eu for EU accounts.<br/>__*Optional*__
+
+
+
+## struct DatadogDashboardProps  <a id="nomadblacky-cdk-datadog-resources-datadogdashboardprops"></a>
+
+
+
+
+
+
+Name | Type | Description 
+-----|------|-------------
+**dashboardDefinition** | <code>string</code> | JSON string of the dashboard definition.
+**datadogCredentials** | <code>[DatadogCredentials](#nomadblacky-cdk-datadog-resources-datadogcredentials)</code> | Credentials for the Datadog API.
 
 
 
