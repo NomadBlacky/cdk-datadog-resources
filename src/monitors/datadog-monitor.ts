@@ -1,6 +1,7 @@
 import { CfnResource, Construct } from '@aws-cdk/core';
 import * as camelcaseKeys from 'camelcase-keys';
-import { DatadogCredentials, MonitorOptions, MonitorType } from './properties';
+import { DatadogCredentials } from '../common/properties';
+import { MonitorOptions, MonitorType } from './properties';
 
 export interface DatadogMonitorProps {
   /** Credentials for the Datadog API */

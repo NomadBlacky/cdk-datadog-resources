@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot test 1`] = `
+Object {
+  "Resources": Object {
+    "TestMonitor": Object {
+      "Properties": Object {
+        "DashboardDefinition": "{
+  \\"title\\": \\"Test from cdk-datadog-resources\\",
+  \\"description\\": \\"\\",
+  \\"widgets\\": [
+    {
+      \\"id\\": 7963397977738346,
+      \\"definition\\": {
+        \\"title\\": \\"\\",
+        \\"title_size\\": \\"16\\",
+        \\"title_align\\": \\"left\\",
+        \\"time\\": {
+
+        },
+        \\"type\\": \\"query_value\\",
+        \\"requests\\": [
+          {
+            \\"q\\": \\"avg:datadog.estimated_usage.hosts{*}\\",
+            \\"aggregator\\": \\"avg\\",
+            \\"conditional_formats\\": [
+              {
+                \\"comparator\\": \\"<=\\",
+                \\"palette\\": \\"white_on_yellow\\",
+                \\"value\\": 0
+              },
+              {
+                \\"comparator\\": \\">=\\",
+                \\"palette\\": \\"white_on_green\\",
+                \\"value\\": 1
+              }
+            ]
+          }
+        ],
+        \\"autoscale\\": true,
+        \\"precision\\": 2
+      }
+    }
+  ],
+  \\"template_variables\\": [
+
+  ],
+  \\"layout_type\\": \\"ordered\\",
+  \\"is_read_only\\": false,
+  \\"notify_list\\": [
+
+  ],
+  \\"id\\": \\"k87-rwz-htu\\"
+}
+",
+        "DatadogCredentials": Object {
+          "ApiKey": "DATADOG_API_KEY",
+          "ApplicationKey": "DATADOG_APP_KEY",
+        },
+      },
+      "Type": "Datadog::Dashboards::Dashboard",
+    },
+  },
+}
+`;
