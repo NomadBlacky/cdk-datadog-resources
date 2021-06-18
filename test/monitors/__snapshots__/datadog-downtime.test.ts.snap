@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot test 1`] = `
+Object {
+  "Resources": Object {
+    "TestMonitor": Object {
+      "Properties": Object {
+        "DatadogCredentials": Object {
+          "ApiKey": "DATADOG_API_KEY",
+          "ApplicationKey": "DATADOG_APP_KEY",
+        },
+        "Scope": "host:myserver",
+      },
+      "Type": "Datadog::Monitors::Downtime",
+    },
+  },
+}
+`;
