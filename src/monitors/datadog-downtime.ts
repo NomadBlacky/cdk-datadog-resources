@@ -53,7 +53,7 @@ export interface DatadogDowntimeProps {
 }
 
 /**
- * Datadog Monitors 2.0.0
+ * Datadog Monitor Downtime 2.0.0
  */
 export class DatadogDowntime {
   constructor(scope: Construct, id: string, props: DatadogDowntimeProps) {

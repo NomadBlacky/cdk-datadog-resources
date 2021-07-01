@@ -10,9 +10,9 @@ test('Snapshot test', () => {
       apiKey: 'DATADOG_API_KEY',
       applicationKey: 'DATADOG_APP_KEY',
     },
-    email: "jane.doe@example.com",
-    name: "name_example",
-    handle: "title_example",
+    email: 'jane.doe@example.com',
+    name: 'name_example',
+    handle: 'title_example',
     disabled: false,
   });
   expect(SynthUtils.toCloudFormation(stack)).toMatchSnapshot();

@@ -5,6 +5,8 @@
 Name|Description
 ----|-----------
 [DatadogDashboard](#nomadblacky-cdk-datadog-resources-datadogdashboard)|Datadog Dashboard 1.0.0.
+[DatadogDowntime](#nomadblacky-cdk-datadog-resources-datadogdowntime)|Datadog Monitor Downtime 2.0.0.
+[DatadogIAMUser](#nomadblacky-cdk-datadog-resources-datadogiamuser)|Datadog Application User 1.2.0.
 [DatadogMonitor](#nomadblacky-cdk-datadog-resources-datadogmonitor)|Datadog Monitor 3.0.0.
 
 
@@ -14,6 +16,8 @@ Name|Description
 ----|-----------
 [DatadogCredentials](#nomadblacky-cdk-datadog-resources-datadogcredentials)|Credentials for the Datadog API.
 [DatadogDashboardProps](#nomadblacky-cdk-datadog-resources-datadogdashboardprops)|*No description*
+[DatadogDowntimeProps](#nomadblacky-cdk-datadog-resources-datadogdowntimeprops)|*No description*
+[DatadogIAMUserProps](#nomadblacky-cdk-datadog-resources-datadogiamuserprops)|*No description*
 [DatadogMonitorProps](#nomadblacky-cdk-datadog-resources-datadogmonitorprops)|*No description*
 [MonitorOptions](#nomadblacky-cdk-datadog-resources-monitoroptions)|*No description*
 [MonitorThresholdWindows](#nomadblacky-cdk-datadog-resources-monitorthresholdwindows)|*No description*
@@ -47,6 +51,71 @@ new DatadogDashboard(scope: Construct, id: string, props: DatadogDashboardProps)
 * **props** (<code>[DatadogDashboardProps](#nomadblacky-cdk-datadog-resources-datadogdashboardprops)</code>)  *No description*
   * **dashboardDefinition** (<code>string</code>)  JSON string of the dashboard definition. 
   * **datadogCredentials** (<code>[DatadogCredentials](#nomadblacky-cdk-datadog-resources-datadogcredentials)</code>)  Credentials for the Datadog API. 
+
+
+
+
+## class DatadogDowntime  <a id="nomadblacky-cdk-datadog-resources-datadogdowntime"></a>
+
+Datadog Monitor Downtime 2.0.0.
+
+
+### Initializer
+
+
+
+
+```ts
+new DatadogDowntime(scope: Construct, id: string, props: DatadogDowntimeProps)
+```
+
+* **scope** (<code>[Construct](#aws-cdk-core-construct)</code>)  *No description*
+* **id** (<code>string</code>)  *No description*
+* **props** (<code>[DatadogDowntimeProps](#nomadblacky-cdk-datadog-resources-datadogdowntimeprops)</code>)  *No description*
+  * **datadogCredentials** (<code>[DatadogCredentials](#nomadblacky-cdk-datadog-resources-datadogcredentials)</code>)  Credentials for the Datadog API. 
+  * **scope** (<code>Array<string></code>)  The scope(s) to which the downtime applies. 
+  * **active** (<code>boolean</code>)  Whether or not this downtime is currently active. __*Optional*__
+  * **canceled** (<code>number</code>)  POSIX Timestamp of cancellation of this downtime (null if not canceled). __*Optional*__
+  * **creatorId** (<code>number</code>)  Id of the user who created this downtime. __*Optional*__
+  * **disabled** (<code>boolean</code>)  Whether or not this downtime is disabled. __*Optional*__
+  * **downtimeType** (<code>number</code>)  Type of this downtime. __*Optional*__
+  * **end** (<code>number</code>)  POSIX timestamp to end the downtime. __*Optional*__
+  * **id** (<code>number</code>)  Id of this downtime. __*Optional*__
+  * **message** (<code>string</code>)  Message on the downtime. __*Optional*__
+  * **monitorId** (<code>number</code>)  A single monitor to which the downtime applies. __*Optional*__
+  * **monitorTags** (<code>Array<string></code>)  A comma-separated list of monitor tags, to which the downtime applies. __*Optional*__
+  * **parentId** (<code>number</code>)  The ID of the parent downtime to this one. __*Optional*__
+  * **start** (<code>number</code>)  POSIX timestamp to start the downtime. __*Optional*__
+  * **timezone** (<code>string</code>)  The timezone for the downtime. __*Optional*__
+  * **updaterId** (<code>number</code>)  Id of the user who updated this downtime. __*Optional*__
+
+
+
+
+## class DatadogIAMUser  <a id="nomadblacky-cdk-datadog-resources-datadogiamuser"></a>
+
+Datadog Application User 1.2.0.
+
+
+### Initializer
+
+
+
+
+```ts
+new DatadogIAMUser(scope: Construct, id: string, props: DatadogIAMUserProps)
+```
+
+* **scope** (<code>[Construct](#aws-cdk-core-construct)</code>)  *No description*
+* **id** (<code>string</code>)  *No description*
+* **props** (<code>[DatadogIAMUserProps](#nomadblacky-cdk-datadog-resources-datadogiamuserprops)</code>)  *No description*
+  * **datadogCredentials** (<code>[DatadogCredentials](#nomadblacky-cdk-datadog-resources-datadogcredentials)</code>)  Credentials for the Datadog API. 
+  * **accessRole** (<code>string</code>)  The role of the user. __*Optional*__
+  * **disabled** (<code>boolean</code>)  Whether or not the user is disabled. __*Optional*__
+  * **email** (<code>string</code>)  User email. __*Optional*__
+  * **handle** (<code>string</code>)  User handle (a valid email). __*Optional*__
+  * **name** (<code>string</code>)  User name. __*Optional*__
+  * **verified** (<code>boolean</code>)  Whether or not the user is verified. __*Optional*__
 
 
 
@@ -106,6 +175,53 @@ Name | Type | Description
 -----|------|-------------
 **dashboardDefinition** | <code>string</code> | JSON string of the dashboard definition.
 **datadogCredentials** | <code>[DatadogCredentials](#nomadblacky-cdk-datadog-resources-datadogcredentials)</code> | Credentials for the Datadog API.
+
+
+
+## struct DatadogDowntimeProps  <a id="nomadblacky-cdk-datadog-resources-datadogdowntimeprops"></a>
+
+
+
+
+
+
+Name | Type | Description 
+-----|------|-------------
+**datadogCredentials** | <code>[DatadogCredentials](#nomadblacky-cdk-datadog-resources-datadogcredentials)</code> | Credentials for the Datadog API.
+**scope** | <code>Array<string></code> | The scope(s) to which the downtime applies.
+**active**? | <code>boolean</code> | Whether or not this downtime is currently active.<br/>__*Optional*__
+**canceled**? | <code>number</code> | POSIX Timestamp of cancellation of this downtime (null if not canceled).<br/>__*Optional*__
+**creatorId**? | <code>number</code> | Id of the user who created this downtime.<br/>__*Optional*__
+**disabled**? | <code>boolean</code> | Whether or not this downtime is disabled.<br/>__*Optional*__
+**downtimeType**? | <code>number</code> | Type of this downtime.<br/>__*Optional*__
+**end**? | <code>number</code> | POSIX timestamp to end the downtime.<br/>__*Optional*__
+**id**? | <code>number</code> | Id of this downtime.<br/>__*Optional*__
+**message**? | <code>string</code> | Message on the downtime.<br/>__*Optional*__
+**monitorId**? | <code>number</code> | A single monitor to which the downtime applies.<br/>__*Optional*__
+**monitorTags**? | <code>Array<string></code> | A comma-separated list of monitor tags, to which the downtime applies.<br/>__*Optional*__
+**parentId**? | <code>number</code> | The ID of the parent downtime to this one.<br/>__*Optional*__
+**start**? | <code>number</code> | POSIX timestamp to start the downtime.<br/>__*Optional*__
+**timezone**? | <code>string</code> | The timezone for the downtime.<br/>__*Optional*__
+**updaterId**? | <code>number</code> | Id of the user who updated this downtime.<br/>__*Optional*__
+
+
+
+## struct DatadogIAMUserProps  <a id="nomadblacky-cdk-datadog-resources-datadogiamuserprops"></a>
+
+
+
+
+
+
+Name | Type | Description 
+-----|------|-------------
+**datadogCredentials** | <code>[DatadogCredentials](#nomadblacky-cdk-datadog-resources-datadogcredentials)</code> | Credentials for the Datadog API.
+**accessRole**? | <code>string</code> | The role of the user.<br/>__*Optional*__
+**disabled**? | <code>boolean</code> | Whether or not the user is disabled.<br/>__*Optional*__
+**email**? | <code>string</code> | User email.<br/>__*Optional*__
+**handle**? | <code>string</code> | User handle (a valid email).<br/>__*Optional*__
+**name**? | <code>string</code> | User name.<br/>__*Optional*__
+**verified**? | <code>boolean</code> | Whether or not the user is verified.<br/>__*Optional*__
 
 
 
