@@ -24,7 +24,7 @@ You need to register the correct version listed in `Supported Resources`.
 |            | Datadog-AWS integration | `Datadog::Integrations::AWS`     | [Manage your Datadog-Amazon Web Service integration.][2] | N/A                |
 |     ✅     | Monitors                | `Datadog::Monitors::Monitor`     | [Create, update, and delete Datadog monitors.][3]        | [3.0.0][6]         |
 |     ✅     | Downtimes               | `Datadog::Monitors::Downtime`    | [Enable or disable downtimes for your monitors.][4]      | [2.0.0][8]         |
-|     ✅     | User                    | `Datadog::IAM::User`             | [Create and manage Datadog users.][5]                    | [1.2.0][9]         |
+|     ✅     | Users                   | `Datadog::IAM::User`             | [Create and manage Datadog users.][5]                    | [1.2.0][9]         |
 
 [1]: https://github.com/DataDog/datadog-cloudformation-resources/tree/master/datadog-dashboards-dashboard-handler
 [2]: https://github.com/DataDog/datadog-cloudformation-resources/tree/master/datadog-integrations-aws-handler
@@ -101,5 +101,38 @@ new DatadogMonitor(yourStack, 'TestMonitor', {
     notifyNoData: true,
     evaluationDelay: 60,
   },
+});
+```
+
+### Downtimes
+
+```typescript
+import { DatadogDowntime } from '@nomadblacky/cdk-datadog-resources';
+
+new DatadogDowntime(stack, 'TestMonitor', {
+  datadogCredentials: {
+    apiKey: 'DATADOG_API_KEY',
+    applicationKey: 'DATADOG_APP_KEY',
+  },
+  scope: ['host:myserver', 'service:myservice'],
+  start: 1624542715,
+  end: 1624546321,
+});
+```
+
+### Users
+
+```typescript
+import { DatadogIAMUser } from '@nomadblacky/cdk-datadog-resources';
+
+new DatadogIAMUser(stack, 'TestUser', {
+  datadogCredentials: {
+    apiKey: 'DATADOG_API_KEY',
+    applicationKey: 'DATADOG_APP_KEY',
+  },
+  email: 'jane.doe@example.com',
+  name: 'name_example',
+  handle: 'title_example',
+  disabled: false,
 });
 ```
