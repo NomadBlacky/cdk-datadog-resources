@@ -2,11 +2,11 @@
 
 [![npm version](https://badge.fury.io/js/%40nomadblacky%2Fcdk-datadog-resources.svg)](https://badge.fury.io/js/%40nomadblacky%2Fcdk-datadog-resources)
 
-An AWS CDK construct library that wrapped [DataDog/datadog-cloudformation-resources](https://github.com/DataDog/datadog-cloudformation-resources).
+An AWS CDK construct library that wraps [DataDog/datadog-cloudformation-resources](https://github.com/DataDog/datadog-cloudformation-resources).
 
 ## Requirements
 
-Before use this library, [register datadog-cloudformation-resources to your AWS account.](https://github.com/DataDog/datadog-cloudformation-resources#datadog-aws-cloudformation)
+Before using this library, [register datadog-cloudformation-resources to your AWS account.](https://github.com/DataDog/datadog-cloudformation-resources#datadog-aws-cloudformation)
 
 You need to register the correct version listed in `Supported Resources`.
 
@@ -62,7 +62,7 @@ Java
 
 ## Usage
 
-Belows are examples of TypeScript.
+Below are examples of TypeScript.
 
 ### Dashboards
 
