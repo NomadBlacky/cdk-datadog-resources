@@ -13,8 +13,7 @@ export interface DatadogIntegrationProps {
    *
    * @default DatadogIntegrationRole
    * */
-  roleName?: string;
-
+  readonly roleName?: string;
 }
 
 /**
