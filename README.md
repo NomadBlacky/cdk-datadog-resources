@@ -142,11 +142,11 @@ new DatadogIAMUser(stack, 'TestUser', {
 
 ```typescript
 new DatadogIntegration(this, 'DataDogIntegration', {
-  accountId: "ACCOUNT_ID",
-  roleName: "DataDogIntegrator",
   datadogCredentials: {
     apiKey: "DATADOG_API_KEY",
     applicationKey: "DATADOG_APP_KEY",
-  }
+  },
+  accountId: "ACCOUNT_ID",
+  roleName: "DatadogIntegrationRole",
 });
-  ```
+```

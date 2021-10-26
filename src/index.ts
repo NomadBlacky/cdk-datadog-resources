@@ -4,4 +4,4 @@ export * from './monitors/datadog-monitor';
 export * from './monitors/properties';
 export * from './dashboards/datadog-dashboard';
 export * from './users/datadog-user';
-export * from './integrations/datadog-integration';
+export * from './integrations/datadog-integration-aws';

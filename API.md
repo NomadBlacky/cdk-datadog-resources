@@ -7,7 +7,7 @@ Name|Description
 [DatadogDashboard](#nomadblacky-cdk-datadog-resources-datadogdashboard)|Datadog Dashboard 1.0.0.
 [DatadogDowntime](#nomadblacky-cdk-datadog-resources-datadogdowntime)|Datadog Monitor Downtime 2.0.0.
 [DatadogIAMUser](#nomadblacky-cdk-datadog-resources-datadogiamuser)|Datadog Application User 1.2.0.
-[DatadogIntegration](#nomadblacky-cdk-datadog-resources-datadogintegration)|Datadog Integration 1.0.0.
+[DatadogIntegrationAWS](#nomadblacky-cdk-datadog-resources-datadogintegrationaws)|Datadog Integration 1.1.0.
 [DatadogMonitor](#nomadblacky-cdk-datadog-resources-datadogmonitor)|Datadog Monitor 3.0.0.
 
 
@@ -19,7 +19,7 @@ Name|Description
 [DatadogDashboardProps](#nomadblacky-cdk-datadog-resources-datadogdashboardprops)|*No description*
 [DatadogDowntimeProps](#nomadblacky-cdk-datadog-resources-datadogdowntimeprops)|*No description*
 [DatadogIAMUserProps](#nomadblacky-cdk-datadog-resources-datadogiamuserprops)|*No description*
-[DatadogIntegrationProps](#nomadblacky-cdk-datadog-resources-datadogintegrationprops)|*No description*
+[DatadogIntegrationAWSProps](#nomadblacky-cdk-datadog-resources-datadogintegrationawsprops)|*No description*
 [DatadogMonitorProps](#nomadblacky-cdk-datadog-resources-datadogmonitorprops)|*No description*
 [MonitorOptions](#nomadblacky-cdk-datadog-resources-monitoroptions)|*No description*
 [MonitorThresholdWindows](#nomadblacky-cdk-datadog-resources-monitorthresholdwindows)|*No description*
@@ -122,9 +122,9 @@ new DatadogIAMUser(scope: Construct, id: string, props: DatadogIAMUserProps)
 
 
 
-## class DatadogIntegration  <a id="nomadblacky-cdk-datadog-resources-datadogintegration"></a>
+## class DatadogIntegrationAWS  <a id="nomadblacky-cdk-datadog-resources-datadogintegrationaws"></a>
 
-Datadog Integration 1.0.0.
+Datadog Integration 1.1.0.
 
 
 ### Initializer
@@ -133,15 +133,15 @@ Datadog Integration 1.0.0.
 
 
 ```ts
-new DatadogIntegration(scope: Construct, id: string, props: DatadogIntegrationProps)
+new DatadogIntegrationAWS(scope: Construct, id: string, props: DatadogIntegrationAWSProps)
 ```
 
 * **scope** (<code>[Construct](#aws-cdk-core-construct)</code>)  *No description*
 * **id** (<code>string</code>)  *No description*
-* **props** (<code>[DatadogIntegrationProps](#nomadblacky-cdk-datadog-resources-datadogintegrationprops)</code>)  *No description*
+* **props** (<code>[DatadogIntegrationAWSProps](#nomadblacky-cdk-datadog-resources-datadogintegrationawsprops)</code>)  *No description*
   * **accountId** (<code>string</code>)  The id of the account with which to integrate. 
   * **datadogCredentials** (<code>[DatadogCredentials](#nomadblacky-cdk-datadog-resources-datadogcredentials)</code>)  Credentials for the Datadog API. 
-  * **roleName** (<code>string</code>)  The name of the created role. __*Default*__: DatadogIntegrationRole
+  * **roleName** (<code>string</code>)  The name of the created role. 
 
 
 
@@ -251,7 +251,7 @@ Name | Type | Description
 
 
 
-## struct DatadogIntegrationProps  <a id="nomadblacky-cdk-datadog-resources-datadogintegrationprops"></a>
+## struct DatadogIntegrationAWSProps  <a id="nomadblacky-cdk-datadog-resources-datadogintegrationawsprops"></a>
 
 
 
@@ -262,7 +262,7 @@ Name | Type | Description
 -----|------|-------------
 **accountId** | <code>string</code> | The id of the account with which to integrate.
 **datadogCredentials** | <code>[DatadogCredentials](#nomadblacky-cdk-datadog-resources-datadogcredentials)</code> | Credentials for the Datadog API.
-**roleName**? | <code>string</code> | The name of the created role.<br/>__*Default*__: DatadogIntegrationRole
+**roleName** | <code>string</code> | The name of the created role.
 
 
 
