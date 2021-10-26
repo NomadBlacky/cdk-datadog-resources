@@ -141,7 +141,9 @@ new DatadogIAMUser(stack, 'TestUser', {
 ### DataDog Integration
 
 ```typescript
-new DatadogIntegration(this, 'DataDogIntegration', {
+import { DatadogIntegrationAWS } from '@nomadblacky/cdk-datadog-resources';
+
+new DatadogIntegrationAWS(this, 'DataDogIntegration', {
   datadogCredentials: {
     apiKey: "DATADOG_API_KEY",
     applicationKey: "DATADOG_APP_KEY",
