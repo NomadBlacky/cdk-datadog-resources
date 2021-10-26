@@ -2,6 +2,7 @@ import * as fs from 'fs';
 import { App, Stack } from '@aws-cdk/core';
 import { DatadogCredentials } from './common/properties';
 import { DatadogDashboard } from './dashboards/datadog-dashboard';
+import { DatadogIntegrationAWS } from './integrations/datadog-integration-aws';
 import { DatadogDowntime } from './monitors/datadog-downtime';
 import { DatadogMonitor } from './monitors/datadog-monitor';
 import { MonitorType } from './monitors/properties';
@@ -51,4 +52,10 @@ new DatadogIAMUser(stack, 'TestUser', {
   email: 'nomadblacky@gmail.com',
   handle: 'nomadblacky@gmail.com',
   name: 'NomadBlacky',
+});
+
+new DatadogIntegrationAWS(stack, 'TestIntegration', {
+  datadogCredentials,
+  accountId: process.env.AWS_ACCOUNT_ID!,
+  roleName: 'DatadogIntegrationRole',
 });

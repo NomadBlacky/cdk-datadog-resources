@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot test 1`] = `
+Object {
+  "Resources": Object {
+    "TestIntegration": Object {
+      "Properties": Object {
+        "AccountID": "123456",
+        "DatadogCredentials": Object {
+          "ApiKey": "DATADOG_API_KEY",
+          "ApplicationKey": "DATADOG_APP_KEY",
+        },
+        "RoleName": "DatadogAWSAcctRoleName",
+      },
+      "Type": "Datadog::Integrations::AWS",
+    },
+  },
+}
+`;
