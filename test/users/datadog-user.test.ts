@@ -1,5 +1,5 @@
-import { SynthUtils } from '@aws-cdk/assert';
-import { Stack } from '@aws-cdk/core';
+import { Template } from 'aws-cdk-lib/assertions';
+import { Stack } from 'aws-cdk-lib/core';
 import { DatadogIAMUser } from '../../src/users/datadog-user';
 
 test('Snapshot test', () => {
@@ -15,5 +15,6 @@ test('Snapshot test', () => {
     handle: 'title_example',
     disabled: false,
   });
-  expect(SynthUtils.toCloudFormation(stack)).toMatchSnapshot();
+  const template = Template.fromStack(stack);
+  expect(template).toMatchSnapshot();
 });

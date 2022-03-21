@@ -1,6 +1,5 @@
-import { SynthUtils } from '@aws-cdk/assert';
-import '@aws-cdk/assert/jest';
-import { Stack } from '@aws-cdk/core';
+import { Template } from 'aws-cdk-lib/assertions';
+import { Stack } from 'aws-cdk-lib/core';
 import { DatadogIntegrationAWS } from '../../src/integrations/datadog-integration-aws';
 
 test('Snapshot test', () => {
@@ -15,5 +14,6 @@ test('Snapshot test', () => {
     roleName: 'DatadogAWSAcctRoleName',
   });
 
-  expect(SynthUtils.toCloudFormation(stack)).toMatchSnapshot();
+  const template = Template.fromStack(stack);
+  expect(template).toMatchSnapshot();
 });

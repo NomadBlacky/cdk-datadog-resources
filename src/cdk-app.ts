@@ -1,5 +1,5 @@
 import * as fs from 'fs';
-import { App, Stack } from '@aws-cdk/core';
+import { App, Stack } from 'aws-cdk-lib/core';
 import { DatadogCredentials } from './common/properties';
 import { DatadogDashboard } from './dashboards/datadog-dashboard';
 import { DatadogIntegrationAWS } from './integrations/datadog-integration-aws';
