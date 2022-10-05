@@ -6,7 +6,7 @@ import { MonitorOptions, MonitorType } from './properties';
 
 export interface DatadogMonitorProps {
   /** Credentials for the Datadog API */
-  readonly datadogCredentials: DatadogCredentials;
+  readonly datadogCredentials?: DatadogCredentials;
 
   /** The monitor query */
   readonly query: string;

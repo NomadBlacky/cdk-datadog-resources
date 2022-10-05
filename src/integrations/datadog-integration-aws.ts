@@ -5,7 +5,7 @@ import { DatadogCredentials } from '../common/properties';
 
 export interface DatadogIntegrationAWSProps {
   /** Credentials for the Datadog API */
-  readonly datadogCredentials: DatadogCredentials;
+  readonly datadogCredentials?: DatadogCredentials;
 
   /** The id of the account with which to integrate. */
   readonly accountId: string;

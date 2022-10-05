@@ -5,7 +5,7 @@ import { DatadogCredentials } from '../common/properties';
 
 export interface DatadogDashboardProps {
   /** Credentials for the Datadog API */
-  readonly datadogCredentials: DatadogCredentials;
+  readonly datadogCredentials?: DatadogCredentials;
 
   /** JSON string of the dashboard definition */
   readonly dashboardDefinition: string;

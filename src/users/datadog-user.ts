@@ -5,7 +5,7 @@ import { DatadogCredentials } from '../common/properties';
 
 export interface DatadogIAMUserProps {
   /** Credentials for the Datadog API */
-  readonly datadogCredentials: DatadogCredentials;
+  readonly datadogCredentials?: DatadogCredentials;
 
   /** The role of the user */
   readonly accessRole?: string;

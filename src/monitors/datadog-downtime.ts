@@ -5,7 +5,7 @@ import { DatadogCredentials } from '../common/properties';
 
 export interface DatadogDowntimeProps {
   /** Credentials for the Datadog API */
-  readonly datadogCredentials: DatadogCredentials;
+  readonly datadogCredentials?: DatadogCredentials;
 
   /** Whether or not this downtime is currently active */
   readonly active?: boolean;

@@ -52,7 +52,7 @@ new DatadogDashboard(scope: Construct, id: string, props: DatadogDashboardProps)
 * **id** (<code>string</code>)  *No description*
 * **props** (<code>[DatadogDashboardProps](#nomadblacky-cdk-datadog-resources-datadogdashboardprops)</code>)  *No description*
   * **dashboardDefinition** (<code>string</code>)  JSON string of the dashboard definition. 
-  * **datadogCredentials** (<code>[DatadogCredentials](#nomadblacky-cdk-datadog-resources-datadogcredentials)</code>)  Credentials for the Datadog API. 
+  * **datadogCredentials** (<code>[DatadogCredentials](#nomadblacky-cdk-datadog-resources-datadogcredentials)</code>)  Credentials for the Datadog API. __*Optional*__
 
 
 
@@ -74,11 +74,11 @@ new DatadogDowntime(scope: Construct, id: string, props: DatadogDowntimeProps)
 * **scope** (<code>[Construct](#aws-cdk-core-construct)</code>)  *No description*
 * **id** (<code>string</code>)  *No description*
 * **props** (<code>[DatadogDowntimeProps](#nomadblacky-cdk-datadog-resources-datadogdowntimeprops)</code>)  *No description*
-  * **datadogCredentials** (<code>[DatadogCredentials](#nomadblacky-cdk-datadog-resources-datadogcredentials)</code>)  Credentials for the Datadog API. 
   * **scope** (<code>Array<string></code>)  The scope(s) to which the downtime applies. 
   * **active** (<code>boolean</code>)  Whether or not this downtime is currently active. __*Optional*__
   * **canceled** (<code>number</code>)  POSIX Timestamp of cancellation of this downtime (null if not canceled). __*Optional*__
   * **creatorId** (<code>number</code>)  Id of the user who created this downtime. __*Optional*__
+  * **datadogCredentials** (<code>[DatadogCredentials](#nomadblacky-cdk-datadog-resources-datadogcredentials)</code>)  Credentials for the Datadog API. __*Optional*__
   * **disabled** (<code>boolean</code>)  Whether or not this downtime is disabled. __*Optional*__
   * **downtimeType** (<code>number</code>)  Type of this downtime. __*Optional*__
   * **end** (<code>number</code>)  POSIX timestamp to end the downtime. __*Optional*__
@@ -111,8 +111,8 @@ new DatadogIAMUser(scope: Construct, id: string, props: DatadogIAMUserProps)
 * **scope** (<code>[Construct](#aws-cdk-core-construct)</code>)  *No description*
 * **id** (<code>string</code>)  *No description*
 * **props** (<code>[DatadogIAMUserProps](#nomadblacky-cdk-datadog-resources-datadogiamuserprops)</code>)  *No description*
-  * **datadogCredentials** (<code>[DatadogCredentials](#nomadblacky-cdk-datadog-resources-datadogcredentials)</code>)  Credentials for the Datadog API. 
   * **accessRole** (<code>string</code>)  The role of the user. __*Optional*__
+  * **datadogCredentials** (<code>[DatadogCredentials](#nomadblacky-cdk-datadog-resources-datadogcredentials)</code>)  Credentials for the Datadog API. __*Optional*__
   * **disabled** (<code>boolean</code>)  Whether or not the user is disabled. __*Optional*__
   * **email** (<code>string</code>)  User email. __*Optional*__
   * **handle** (<code>string</code>)  User handle (a valid email). __*Optional*__
@@ -140,8 +140,8 @@ new DatadogIntegrationAWS(scope: Construct, id: string, props: DatadogIntegratio
 * **id** (<code>string</code>)  *No description*
 * **props** (<code>[DatadogIntegrationAWSProps](#nomadblacky-cdk-datadog-resources-datadogintegrationawsprops)</code>)  *No description*
   * **accountId** (<code>string</code>)  The id of the account with which to integrate. 
-  * **datadogCredentials** (<code>[DatadogCredentials](#nomadblacky-cdk-datadog-resources-datadogcredentials)</code>)  Credentials for the Datadog API. 
   * **roleName** (<code>string</code>)  The name of the created role. 
+  * **datadogCredentials** (<code>[DatadogCredentials](#nomadblacky-cdk-datadog-resources-datadogcredentials)</code>)  Credentials for the Datadog API. __*Optional*__
 
 
 
@@ -163,9 +163,9 @@ new DatadogMonitor(scope: Construct, id: string, props: DatadogMonitorProps)
 * **scope** (<code>[Construct](#aws-cdk-core-construct)</code>)  *No description*
 * **id** (<code>string</code>)  *No description*
 * **props** (<code>[DatadogMonitorProps](#nomadblacky-cdk-datadog-resources-datadogmonitorprops)</code>)  *No description*
-  * **datadogCredentials** (<code>[DatadogCredentials](#nomadblacky-cdk-datadog-resources-datadogcredentials)</code>)  Credentials for the Datadog API. 
   * **query** (<code>string</code>)  The monitor query. 
   * **type** (<code>[MonitorType](#nomadblacky-cdk-datadog-resources-monitortype)</code>)  The type of the monitor. 
+  * **datadogCredentials** (<code>[DatadogCredentials](#nomadblacky-cdk-datadog-resources-datadogcredentials)</code>)  Credentials for the Datadog API. __*Optional*__
   * **message** (<code>string</code>)  A message to include with notifications for the monitor. __*Optional*__
   * **multi** (<code>boolean</code>)  Whether or not the monitor is multi alert. __*Optional*__
   * **name** (<code>string</code>)  Name of the monitor. __*Optional*__
@@ -200,7 +200,7 @@ Name | Type | Description
 Name | Type | Description 
 -----|------|-------------
 **dashboardDefinition** | <code>string</code> | JSON string of the dashboard definition.
-**datadogCredentials** | <code>[DatadogCredentials](#nomadblacky-cdk-datadog-resources-datadogcredentials)</code> | Credentials for the Datadog API.
+**datadogCredentials**? | <code>[DatadogCredentials](#nomadblacky-cdk-datadog-resources-datadogcredentials)</code> | Credentials for the Datadog API.<br/>__*Optional*__
 
 
 
@@ -213,11 +213,11 @@ Name | Type | Description
 
 Name | Type | Description 
 -----|------|-------------
-**datadogCredentials** | <code>[DatadogCredentials](#nomadblacky-cdk-datadog-resources-datadogcredentials)</code> | Credentials for the Datadog API.
 **scope** | <code>Array<string></code> | The scope(s) to which the downtime applies.
 **active**? | <code>boolean</code> | Whether or not this downtime is currently active.<br/>__*Optional*__
 **canceled**? | <code>number</code> | POSIX Timestamp of cancellation of this downtime (null if not canceled).<br/>__*Optional*__
 **creatorId**? | <code>number</code> | Id of the user who created this downtime.<br/>__*Optional*__
+**datadogCredentials**? | <code>[DatadogCredentials](#nomadblacky-cdk-datadog-resources-datadogcredentials)</code> | Credentials for the Datadog API.<br/>__*Optional*__
 **disabled**? | <code>boolean</code> | Whether or not this downtime is disabled.<br/>__*Optional*__
 **downtimeType**? | <code>number</code> | Type of this downtime.<br/>__*Optional*__
 **end**? | <code>number</code> | POSIX timestamp to end the downtime.<br/>__*Optional*__
@@ -241,8 +241,8 @@ Name | Type | Description
 
 Name | Type | Description 
 -----|------|-------------
-**datadogCredentials** | <code>[DatadogCredentials](#nomadblacky-cdk-datadog-resources-datadogcredentials)</code> | Credentials for the Datadog API.
 **accessRole**? | <code>string</code> | The role of the user.<br/>__*Optional*__
+**datadogCredentials**? | <code>[DatadogCredentials](#nomadblacky-cdk-datadog-resources-datadogcredentials)</code> | Credentials for the Datadog API.<br/>__*Optional*__
 **disabled**? | <code>boolean</code> | Whether or not the user is disabled.<br/>__*Optional*__
 **email**? | <code>string</code> | User email.<br/>__*Optional*__
 **handle**? | <code>string</code> | User handle (a valid email).<br/>__*Optional*__
@@ -261,8 +261,8 @@ Name | Type | Description
 Name | Type | Description 
 -----|------|-------------
 **accountId** | <code>string</code> | The id of the account with which to integrate.
-**datadogCredentials** | <code>[DatadogCredentials](#nomadblacky-cdk-datadog-resources-datadogcredentials)</code> | Credentials for the Datadog API.
 **roleName** | <code>string</code> | The name of the created role.
+**datadogCredentials**? | <code>[DatadogCredentials](#nomadblacky-cdk-datadog-resources-datadogcredentials)</code> | Credentials for the Datadog API.<br/>__*Optional*__
 
 
 
@@ -275,9 +275,9 @@ Name | Type | Description
 
 Name | Type | Description 
 -----|------|-------------
-**datadogCredentials** | <code>[DatadogCredentials](#nomadblacky-cdk-datadog-resources-datadogcredentials)</code> | Credentials for the Datadog API.
 **query** | <code>string</code> | The monitor query.
 **type** | <code>[MonitorType](#nomadblacky-cdk-datadog-resources-monitortype)</code> | The type of the monitor.
+**datadogCredentials**? | <code>[DatadogCredentials](#nomadblacky-cdk-datadog-resources-datadogcredentials)</code> | Credentials for the Datadog API.<br/>__*Optional*__
 **message**? | <code>string</code> | A message to include with notifications for the monitor.<br/>__*Optional*__
 **multi**? | <code>boolean</code> | Whether or not the monitor is multi alert.<br/>__*Optional*__
 **name**? | <code>string</code> | Name of the monitor.<br/>__*Optional*__
