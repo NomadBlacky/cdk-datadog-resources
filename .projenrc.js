@@ -6,7 +6,7 @@ const PROJECT_NAME = 'cdk-datadog-resources';
 const project = new AwsCdkConstructLibrary({
   author: 'NomadBlacky',
   authorAddress: 'nomadblacky@gmail.com',
-  cdkVersion: '1.101.0',
+  cdkVersion: '2.92.0',
   defaultReleaseBranch: 'master',
   jsiiFqn: 'projen.AwsCdkConstructLibrary',
   name: `@${ORGANIZATION}/${PROJECT_NAME}`,
@@ -14,7 +14,7 @@ const project = new AwsCdkConstructLibrary({
 
   /* AwsCdkConstructLibraryOptions */
   // cdkAssert: true,                                                                   /* Install the @aws-cdk/assert library? */
-  cdkDependencies: ['@aws-cdk/core'],
+  // cdkDependencies: ['@aws-cdk/core'],
   // cdkDependenciesAsDeps: true,                                                       /* If this is enabled (default), all modules declared in `cdkDependencies` will be also added as normal `dependencies` (as well as `peerDependencies`). */
   // cdkTestDependencies: undefined,                                                    /* AWS CDK modules required for testing. */
   // cdkVersionPinning: false,                                                          /* Use pinned version instead of caret version for CDK. */
@@ -54,7 +54,7 @@ const project = new AwsCdkConstructLibrary({
   bundledDeps: ['camelcase-keys'],
   // deps: [],                                                                          /* Runtime dependencies of this module. */
   // description: undefined,                                                            /* The description is just a string that helps people understand the purpose of the package. */
-  devDeps: ['prettier', 'aws-cdk'],
+  devDeps: ['prettier', 'aws-cdk@2.93.0'],
   // entrypoint: 'lib/index.js',                                                        /* Module entrypoint (`main` in `package.json`). */
   // homepage: undefined,                                                               /* Package's Homepage / Website. */
   // keywords: undefined,                                                               /* Keywords to include in `package.json`. */

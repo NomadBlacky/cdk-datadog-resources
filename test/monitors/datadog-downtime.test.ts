@@ -1,5 +1,5 @@
-import { SynthUtils } from '@aws-cdk/assert';
-import { Stack } from '@aws-cdk/core';
+import { Template } from 'aws-cdk-lib/assertions';
+import { Stack } from 'aws-cdk-lib';
 import { DatadogDowntime } from '../../src/monitors/datadog-downtime';
 
 test('Snapshot test', () => {
@@ -15,5 +15,5 @@ test('Snapshot test', () => {
     end: 1624546321,
   });
 
-  expect(SynthUtils.toCloudFormation(stack)).toMatchSnapshot();
+  expect(Template.fromStack(stack)).toMatchSnapshot();
 });
