@@ -42,9 +42,11 @@ You need to register the correct version listed in `Supported Resources`.
 TypeScript
 
 ```shell
-npm install @nomadblacky/cdk-datadog-resources
+npm install @goodnotes-oss/cdk-datadog-resources
 ```
 
+<details>
+<summary>Disabled</summary>
 Python
 
 ```shell
@@ -60,7 +62,7 @@ Java
     <version>x.y.z</version>
 </dependency>
 ```
-
+</details>
 ## Usage
 
 Below are examples of TypeScript.
@@ -152,3 +154,6 @@ new DatadogIntegrationAWS(this, 'DataDogIntegration', {
   roleName: "DatadogIntegrationRole",
 });
 ```
+
+## Fork
+This is a fork of https://github.com/NomadBlacky/cdk-datadog-resources, which is currently unmaintained.

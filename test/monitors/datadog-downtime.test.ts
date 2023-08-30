@@ -1,5 +1,5 @@
-import { Template } from 'aws-cdk-lib/assertions';
 import { Stack } from 'aws-cdk-lib';
+import { Template } from 'aws-cdk-lib/assertions';
 import { DatadogDowntime } from '../../src/monitors/datadog-downtime';
 
 test('Snapshot test', () => {
