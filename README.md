@@ -1,6 +1,6 @@
 # AWS CDK Datadog Resources
 
-[![npm version](https://badge.fury.io/js/%40nomadblacky%2Fcdk-datadog-resources.svg)](https://badge.fury.io/js/%40nomadblacky%2Fcdk-datadog-resources)
+[![npm version](https://badge.fury.io/js/%40goodnotes-oss%2Fcdk-datadog-resources.svg)](https://badge.fury.io/js/%goodnotes-oss%2Fcdk-datadog-resources)
 
 An AWS CDK construct library that wraps [DataDog/datadog-cloudformation-resources](https://github.com/DataDog/datadog-cloudformation-resources).
 
@@ -13,7 +13,7 @@ You need to register the correct version listed in `Supported Resources`.
 ## Supported CDK Languages
 
 - TypeScript
-- Python
+- ~~Python~~. Not currently supported
 - ~~Java~~ Sorry, there is a problem with the release. ([#22](https://github.com/NomadBlacky/cdk-datadog-resources/issues/22))
 
 ## Supported Resources
@@ -42,40 +42,20 @@ You need to register the correct version listed in `Supported Resources`.
 TypeScript
 
 ```shell
-npm install @nomadblacky/cdk-datadog-resources
-```
-
-Python
-
-```shell
-pip install cdk-datadog-resources
-```
-
-Java
-
-```xml
-<dependency>
-    <groupId>dev.nomadblacky</groupId>
-    <artifactId>cdk-datadog-resources</artifactId>
-    <version>x.y.z</version>
-</dependency>
+npm install @goodnotes-oss/cdk-datadog-resources
 ```
 
 ## Usage
 
-Below are examples of TypeScript.
+Below are examples of TypeScript. Credentials are not required because that is configured at CFN extension level Check [requirements](#requirements)
 
 ### Dashboards
 
 ```typescript
 import * as fs from 'fs';
-import { DatadogDashboard } from '@nomadblacky/cdk-datadog-resources';
+import { DatadogDashboard } from '@goodnotes-oss/cdk-datadog-resources';
 
 new DatadogDashboard(yourStack, 'TestDashboard', {
-  datadogCredentials: {
-    apiKey: process.env.DATADOG_API_KEY!,
-    applicationKey: process.env.DATADOG_APP_KEY!,
-  },
   dashboardDefinition: fs.readFileSync(`${__dirname}/path/to/your/dashboard-definition.json`).toString(),
 });
 ```
@@ -83,15 +63,11 @@ new DatadogDashboard(yourStack, 'TestDashboard', {
 ### Monitors
 
 ```typescript
-import { DatadogMonitor } from '@nomadblacky/cdk-datadog-resources';
+import { DatadogMonitor } from '@goodnotes-oss/cdk-datadog-resources';
 
 new DatadogMonitor(yourStack, 'TestMonitor', {
-  datadogCredentials: {
-    apiKey: process.env.DATADOG_API_KEY!,
-    applicationKey: process.env.DATADOG_APP_KEY!,
-  },
   query: 'avg(last_1h):sum:system.cpu.system{host:host0} > 100',
-  type: MonitorType.QueryAlert,
+  type: MonitorType.QUERY_ALERT,
   name: 'Test Monitor',
   options: {
     thresholds: {
@@ -108,7 +84,7 @@ new DatadogMonitor(yourStack, 'TestMonitor', {
 ### Downtimes
 
 ```typescript
-import { DatadogDowntime } from '@nomadblacky/cdk-datadog-resources';
+import { DatadogDowntime } from '@goodnotes-oss/cdk-datadog-resources';
 
 new DatadogDowntime(stack, 'TestMonitor', {
   datadogCredentials: {
@@ -124,13 +100,9 @@ new DatadogDowntime(stack, 'TestMonitor', {
 ### Users
 
 ```typescript
-import { DatadogIAMUser } from '@nomadblacky/cdk-datadog-resources';
+import { DatadogIAMUser } from '@goodnotes-oss/cdk-datadog-resources';
 
 new DatadogIAMUser(stack, 'TestUser', {
-  datadogCredentials: {
-    apiKey: 'DATADOG_API_KEY',
-    applicationKey: 'DATADOG_APP_KEY',
-  },
   email: 'jane.doe@example.com',
   name: 'name_example',
   handle: 'title_example',
@@ -141,14 +113,13 @@ new DatadogIAMUser(stack, 'TestUser', {
 ### DataDog Integration
 
 ```typescript
-import { DatadogIntegrationAWS } from '@nomadblacky/cdk-datadog-resources';
+import { DatadogIntegrationAWS } from '@goodnotes-oss/cdk-datadog-resources';
 
 new DatadogIntegrationAWS(this, 'DataDogIntegration', {
-  datadogCredentials: {
-    apiKey: "DATADOG_API_KEY",
-    applicationKey: "DATADOG_APP_KEY",
-  },
   accountId: "ACCOUNT_ID",
   roleName: "DatadogIntegrationRole",
 });
 ```
+
+## Fork
+This is a fork of https://github.com/NomadBlacky/cdk-datadog-resources, which is currently unmaintained.

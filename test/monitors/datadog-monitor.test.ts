@@ -1,5 +1,5 @@
-import { SynthUtils } from '@aws-cdk/assert';
-import { Stack } from '@aws-cdk/core';
+import { Stack } from 'aws-cdk-lib';
+import { Template } from 'aws-cdk-lib/assertions';
 import { DatadogMonitor, MonitorType } from '../../src';
 
 test('Snapshot test', () => {
@@ -24,5 +24,5 @@ test('Snapshot test', () => {
     },
   });
 
-  expect(SynthUtils.toCloudFormation(stack)).toMatchSnapshot();
+  expect(Template.fromStack(stack)).toMatchSnapshot();
 });

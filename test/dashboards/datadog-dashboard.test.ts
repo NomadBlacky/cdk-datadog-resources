@@ -1,6 +1,6 @@
 import * as fs from 'fs';
-import { SynthUtils } from '@aws-cdk/assert';
-import { Stack } from '@aws-cdk/core';
+import { Stack } from 'aws-cdk-lib';
+import { Template } from 'aws-cdk-lib/assertions';
 import { DatadogDashboard } from '../../src/dashboards/datadog-dashboard';
 
 test('Snapshot test', () => {
@@ -16,5 +16,5 @@ test('Snapshot test', () => {
     dashboardDefinition: dashboardDefJson,
   });
 
-  expect(SynthUtils.toCloudFormation(stack)).toMatchSnapshot();
+  expect(Template.fromStack(stack)).toMatchSnapshot();
 });

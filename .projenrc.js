@@ -1,20 +1,20 @@
-const { AwsCdkConstructLibrary, NpmAccess } = require('projen');
+const { awscdk, javascript } = require('projen');
 
-const ORGANIZATION = 'nomadblacky';
+const AwsCdkConstructLibrary = awscdk.AwsCdkConstructLibrary;
+const ORGANIZATION = 'goodnotes-oss';
 const PROJECT_NAME = 'cdk-datadog-resources';
 
 const project = new AwsCdkConstructLibrary({
-  author: 'NomadBlacky',
-  authorAddress: 'nomadblacky@gmail.com',
-  cdkVersion: '1.101.0',
+  author: 'Gabriel Fürstenheim',
+  authorAddress: 'gabriel.f@goodnotes.com',
+  cdkVersion: '2.92.0',
   defaultReleaseBranch: 'master',
   jsiiFqn: 'projen.AwsCdkConstructLibrary',
   name: `@${ORGANIZATION}/${PROJECT_NAME}`,
-  repositoryUrl: 'https://github.com/NomadBlacky/cdk-datadog-resources.git',
+  repositoryUrl: 'https://github.com/GoodNotes/cdk-datadog-resources.git',
 
   /* AwsCdkConstructLibraryOptions */
-  // cdkAssert: true,                                                                   /* Install the @aws-cdk/assert library? */
-  cdkDependencies: ['@aws-cdk/core'],
+  constructsVersion: '10.2.69',
   // cdkDependenciesAsDeps: true,                                                       /* If this is enabled (default), all modules declared in `cdkDependencies` will be also added as normal `dependencies` (as well as `peerDependencies`). */
   // cdkTestDependencies: undefined,                                                    /* AWS CDK modules required for testing. */
   // cdkVersionPinning: false,                                                          /* Use pinned version instead of caret version for CDK. */
@@ -30,16 +30,9 @@ const project = new AwsCdkConstructLibrary({
   // eslintOptions: undefined,                                                          /* Eslint options. */
   // excludeTypescript: undefined,                                                      /* Accepts a list of glob patterns. */
   // publishToGo: undefined,                                                            /* Publish Go bindings to a git repository. */
-  publishToMaven: {
-    javaPackage: 'dev.nomadblacky.cdk_datadog_resources',
-    mavenGroupId: 'dev.nomadblacky',
-    mavenArtifactId: 'cdk-datadog-resources',
-  },
+  publishToMaven: false,
   // publishToNuget: undefined,                                                         /* Publish to NuGet. */
-  publishToPypi: {
-    distName: PROJECT_NAME,
-    module: 'cdk_datadog_resources',
-  },
+  publishToPypi: false,
   // rootdir: '.',                                                                      /* undefined */
   // sampleCode: true,                                                                  /* Generate one-time sample in `src/` and `test/` if there are no files there. */
 
@@ -54,7 +47,7 @@ const project = new AwsCdkConstructLibrary({
   bundledDeps: ['camelcase-keys'],
   // deps: [],                                                                          /* Runtime dependencies of this module. */
   // description: undefined,                                                            /* The description is just a string that helps people understand the purpose of the package. */
-  devDeps: ['prettier', 'aws-cdk'],
+  devDeps: ['prettier', 'aws-cdk@2.93.0', 'aws-cdk-lib@2.92.0'],
   // entrypoint: 'lib/index.js',                                                        /* Module entrypoint (`main` in `package.json`). */
   // homepage: undefined,                                                               /* Package's Homepage / Website. */
   // keywords: undefined,                                                               /* Keywords to include in `package.json`. */
@@ -62,14 +55,14 @@ const project = new AwsCdkConstructLibrary({
   // licensed: true,                                                                    /* Indicates if a license should be added. */
   // maxNodeVersion: undefined,                                                         /* Minimum node.js version to require via `engines` (inclusive). */
   // minNodeVersion: undefined,                                                         /* Minimum Node.js version to require via package.json `engines` (inclusive). */
-  npmAccess: NpmAccess.PUBLIC,
+  npmAccess: javascript.NpmAccess.PUBLIC,
   // npmDistTag: 'latest',                                                              /* Tags can be used to provide an alias instead of version numbers. */
   // npmRegistryUrl: 'https://registry.npmjs.org',                                      /* The base URL of the npm package registry. */
   // npmTaskExecution: NpmTaskExecution.PROJEN,                                         /* Determines how tasks are executed when invoked as npm scripts (yarn/npm run xyz). */
   // packageManager: NodePackageManager.YARN,                                           /* The Node Package Manager used to execute scripts. */
   // packageName: undefined,                                                            /* The "name" in package.json. */
   // peerDependencyOptions: undefined,                                                  /* Options for `peerDeps`. */
-  // peerDeps: [],                                                                      /* Peer dependencies for this module. */
+  peerDeps: ['aws-cdk-lib@2.92.0'], /* Peer dependencies for this module. */
   // projenCommand: 'npx projen',                                                       /* The shell command to use in order to run the projen CLI. */
   // repository: undefined,                                                             /* The repository is the location where the actual code for your package lives. */
   // repositoryDirectory: undefined,                                                    /* If the package.json for your package is not in the root directory (for example if it is part of a monorepo), you can specify the directory in which it lives. */
@@ -123,5 +116,7 @@ const project = new AwsCdkConstructLibrary({
   // projectType: ProjectType.UNKNOWN,                                                  /* Which type of project this is (library/app). */
   // readme: undefined,                                                                 /* The README setup. */
 });
-
+// docgen is currently the only task of post-compile and it fails for aws-cdk-lib in jsii
+// https://github.com/cdklabs/jsii-docgen/issues/1122
+project.tasks.tryFind('docgen').reset();
 project.synth();

@@ -1,6 +1,7 @@
-import { CfnResource, Construct } from '@aws-cdk/core';
+import { CfnResource } from 'aws-cdk-lib';
 // eslint-disable-next-line @typescript-eslint/no-require-imports
 import camelcaseKeys = require('camelcase-keys');
+import { Construct } from 'constructs';
 import { DatadogCredentials } from '../common/properties';
 
 export interface DatadogIAMUserProps {
