@@ -1,6 +1,6 @@
 # AWS CDK Datadog Resources
 
-[![npm version](https://badge.fury.io/js/%40nomadblacky%2Fcdk-datadog-resources.svg)](https://badge.fury.io/js/%40nomadblacky%2Fcdk-datadog-resources)
+[![npm version](https://badge.fury.io/js/%40goodnotes-oss%2Fcdk-datadog-resources.svg)](https://badge.fury.io/js/%goodnotes-oss%2Fcdk-datadog-resources)
 
 An AWS CDK construct library that wraps [DataDog/datadog-cloudformation-resources](https://github.com/DataDog/datadog-cloudformation-resources).
 
@@ -45,25 +45,6 @@ TypeScript
 npm install @goodnotes-oss/cdk-datadog-resources
 ```
 
-<details>
-<summary>Disabled</summary>
-Python
-
-```shell
-pip install cdk-datadog-resources
-```
-
-Java
-
-```xml
-<dependency>
-    <groupId>dev.nomadblacky</groupId>
-    <artifactId>cdk-datadog-resources</artifactId>
-    <version>x.y.z</version>
-</dependency>
-```
-</details>
-
 ## Usage
 
 Below are examples of TypeScript. Credentials are not required because that is configured at CFN extension level Check [requirements](#requirements)
@@ -72,7 +53,7 @@ Below are examples of TypeScript. Credentials are not required because that is c
 
 ```typescript
 import * as fs from 'fs';
-import { DatadogDashboard } from '@goodnotes-oos/cdk-datadog-resources';
+import { DatadogDashboard } from '@goodnotes-oss/cdk-datadog-resources';
 
 new DatadogDashboard(yourStack, 'TestDashboard', {
   dashboardDefinition: fs.readFileSync(`${__dirname}/path/to/your/dashboard-definition.json`).toString(),
@@ -82,7 +63,7 @@ new DatadogDashboard(yourStack, 'TestDashboard', {
 ### Monitors
 
 ```typescript
-import { DatadogMonitor } from '@goodnotes-oos/cdk-datadog-resources';
+import { DatadogMonitor } from '@goodnotes-oss/cdk-datadog-resources';
 
 new DatadogMonitor(yourStack, 'TestMonitor', {
   query: 'avg(last_1h):sum:system.cpu.system{host:host0} > 100',
@@ -103,7 +84,7 @@ new DatadogMonitor(yourStack, 'TestMonitor', {
 ### Downtimes
 
 ```typescript
-import { DatadogDowntime } from '@goodnotes-oos/cdk-datadog-resources';
+import { DatadogDowntime } from '@goodnotes-oss/cdk-datadog-resources';
 
 new DatadogDowntime(stack, 'TestMonitor', {
   datadogCredentials: {
@@ -119,7 +100,7 @@ new DatadogDowntime(stack, 'TestMonitor', {
 ### Users
 
 ```typescript
-import { DatadogIAMUser } from '@goodnotes-oos/cdk-datadog-resources';
+import { DatadogIAMUser } from '@goodnotes-oss/cdk-datadog-resources';
 
 new DatadogIAMUser(stack, 'TestUser', {
   email: 'jane.doe@example.com',
@@ -132,7 +113,7 @@ new DatadogIAMUser(stack, 'TestUser', {
 ### DataDog Integration
 
 ```typescript
-import { DatadogIntegrationAWS } from '@goodnotes-oos/cdk-datadog-resources';
+import { DatadogIntegrationAWS } from '@goodnotes-oss/cdk-datadog-resources';
 
 new DatadogIntegrationAWS(this, 'DataDogIntegration', {
   accountId: "ACCOUNT_ID",

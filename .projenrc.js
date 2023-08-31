@@ -11,7 +11,7 @@ const project = new AwsCdkConstructLibrary({
   defaultReleaseBranch: 'master',
   jsiiFqn: 'projen.AwsCdkConstructLibrary',
   name: `@${ORGANIZATION}/${PROJECT_NAME}`,
-  repositoryUrl: 'https://github.com/NomadBlacky/cdk-datadog-resources.git',
+  repositoryUrl: 'https://github.com/GoodNotes/cdk-datadog-resources.git',
 
   /* AwsCdkConstructLibraryOptions */
   constructsVersion: '10.2.69',
