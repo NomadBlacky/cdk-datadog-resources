@@ -1,8 +1,8 @@
 import { CfnResource, Construct } from '@aws-cdk/core';
 // eslint-disable-next-line @typescript-eslint/no-require-imports
 import camelcaseKeys = require('camelcase-keys');
-import { DatadogCredentials } from '../common/properties';
 import { MonitorOptions, MonitorType } from './properties';
+import { DatadogCredentials } from '../common/properties';
 
 export interface DatadogMonitorProps {
   /** Credentials for the Datadog API */
